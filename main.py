@@ -1,17 +1,18 @@
-# This is a sample Python script.
+from turtle import Turtle, Screen
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+timmy_the_turtle = Turtle()
+
+timmy_the_turtle.shape('turtle')
+timmy_the_turtle.color('midnightBlue')
+timmy_the_turtle.forward(100)
+timmy_the_turtle.right(90)
+timmy_the_turtle.forward(100)
+timmy_the_turtle.right(90)
+timmy_the_turtle.forward(100)
+timmy_the_turtle.right(90)
+timmy_the_turtle.forward(100)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-Troll.999
+screen = Screen()
+screen.exitonclick()
