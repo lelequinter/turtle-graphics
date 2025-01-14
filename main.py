@@ -1,5 +1,5 @@
 from turtle import Turtle, Screen
-from random import randint
+from random import randint, choice
 
 tim = Turtle()
 
@@ -15,19 +15,30 @@ tim.shape('turtle')
 #     tim.forward(10)
 #     tim.pendown()
 
-colors = ["red", "blue", "DarkOrchid", "IndianRed", "DeepSkyBlue"]
+colors = ["red", "blue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "purple"]
+directions = [0, 90, 180, 270]
+tim.pensize(10)
+tim.speed('fastest')
 
 
 def draw_shape(num_sides):
     angle = 360 / num_sides
-    tim.color(colors[randint(0, len(colors)-1)])
+    tim.color(choice(colors))
     for _ in range(num_sides):
         tim.forward(50)
         tim.right(angle)
 
 
-for num_side_n in range(3, 11):
-    draw_shape(num_side_n)
+def random_walk():
+    tim.color(choice(colors))
+    tim.forward(40)
+    tim.right(choice(directions))
+
+
+for num_side_n in range(3, 100):
+    # draw_shape(num_side_n)
+    random_walk()
+
 
 screen = Screen()
 screen.exitonclick()
