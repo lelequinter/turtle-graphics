@@ -20,7 +20,6 @@ tim.shape('turtle')
 colors = ["red", "blue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "purple"]
 screen.colormode(255)
 directions = [0, 90, 180, 270]
-tim.pensize(10)
 tim.speed('fastest')
 
 
@@ -46,10 +45,14 @@ def random_color():
     return color
 
 
-for num_side_n in range(3, 100):
-    # draw_shape(num_side_n)
-    random_walk()
+def draw_spirograph(steps):
+    for draw_angle in range(0, 361, steps):
+        tim.color(random_color())
+        tim.circle(100)
+        tim.setheading(draw_angle)
 
 
-screen = Screen()
+draw_spirograph(10)
+
+
 screen.exitonclick()
